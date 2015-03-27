@@ -1,0 +1,23 @@
+begin
+declare tempPaperId  long;
+declare tempPrizeId  long;
+declare tempResearchId  long;
+declare tempSubjectId  long;
+
+declare cursorPaperId cursor        -- 声明一个游标
+    for
+  select paperId
+  from t_teacher_paper
+  where teacherId = articleId;
+ --declare continue handler for sqlstate '02000' set done=1;  
+-- open cursorPaperId;          -- 打开游标
+  --  fetch cursorPaperId into tempPaperId;              -- 获取IntersectionName
+ -- 遍历所有的行  
+ --   repeat  
+--	delete  from t_paper  where  paperId =temppaperId;
+--	until done end repeat;           -- 结束循环  
+  --  close cursorPaperId;  -- 关闭游标
+
+delete from t_teacher_paper where teacherId = articleId;
+  select paperId from t_teacher_paper where teacherId = articleId   into temppaperId;
+end

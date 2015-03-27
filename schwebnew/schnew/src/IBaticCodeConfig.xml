@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE abatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Abator for iBATIS Configuration 1.0//EN" "http://ibatis.apache.org/dtd/abator-config_1_0.dtd" >
+<abatorConfiguration>
+ <properties url="file:///E:/workspace_school/schnew/resources/abatorConfig.properties" />
+	<abatorContext id="com.59et.cus.web.internet" generatorSet="java5" defaultModelType="flat">
+		<commentGenerator>
+		  <property name="suppressDate" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="${jdbc.driverClassName}"
+			connectionURL="${jdbc.url}"
+			userId="${jdbc.username}"
+			password="${jdbc.password}">
+			<classPathEntry
+				location="${jdbc.jarlocation}" />
+			</jdbcConnection>
+
+		<!--<property name="suppressTypeWarnings" value="false"/>-->
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!--javabean生成-->
+		<javaModelGenerator
+			targetPackage="${javaModel.targetPackage}"
+			targetProject="${workspace.domain.projectname}/src" type="DEFAULT">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+			<property name="rootInterface" value="java.io.Serializable"/>
+			<property name="rootClasspath"
+				value="${workspace.location}/build/classes" />
+		</javaModelGenerator>
+		<!--xml生成-->
+		<sqlMapGenerator targetPackage="${sqlMap.targetPackage}"
+			targetProject="${workspace.domain.projectname}/src" type="DEFAULT">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- DAO生成-->
+		<daoGenerator targetPackage="${dao.targetPackage}"
+			targetProject="${workspace.domain.projectname}/src"   type="SPRING">
+			<property name="enableSubPackages" value="false" />
+			<property name="methodNameCalculator" value="default" />
+			<property name="exampleMethodVisibility" value="public" />
+			<!--<property name="rootInterface" value=""/>-->
+		</daoGenerator>
+	    
+	 <!-- <table tableName="insurance_card"  domainObjectName="" alias="">
+			<columnOverride column="id" jdbcType="VARCHAR"/>
+			<columnOverride column="createDate" jdbcType="TIMESTAMP"/>
+	        <columnOverride column="modifyDate" jdbcType="TIMESTAMP"/>
+	        <columnOverride column="card_code" jdbcType="VARCHAR"/>
+	        <columnOverride column="password" jdbcType="VARCHAR"/>
+	        <columnOverride column="valid_date" jdbcType="TIMESTAMP"/>
+	        <columnOverride column="product_id" jdbcType="VARCHAR"/>
+	        <columnOverride column="isSell" jdbcType="VARCHAR"/>
+			<columnOverride column="state" jdbcType="VARCHAR"/>
+	        <columnOverride column="sell_date" jdbcType="TIMESTAMP"/>
+	        <columnOverride column="backup" jdbcType="VARCHAR"/>
+	    </table> -->  
+	    <!-- <table tableName="bs_order" ></table>
+	    <table tableName="bs_product" ></table>
+	    <table tableName="bs_productcategory" ></table>
+	    <table tableName="bs_supplier" ></table>
+	    <table tableName="bs_user" ></table>
+	    <table tableName="bs_userservice" ></table>
+	    <table tableName="bs_email" ></table>
+	    <table tableName="bs_article" ></table>
+	    <table tableName="bs_menu" ></table>
+	    <table tableName="bs_marking" ></table>
+	    <table tableName="bs_user_role" ></table>
+	    <table tableName="bs_role_resource" ></table>
+	    <table tableName="bs_role" ></table>
+	    <table tableName="bs_resource" ></table>
+	    <table tableName="open_api" ></table>
+	    <table tableName="open_app" ></table>
+	    <table tableName="open_log" ></table>
+	    <table tableName="open_oauth" ></table>
+	    <table tableName="bs_pagestatic" ></table>
+	    <table tableName="bs_leavemessage" ></table>        
+	    <table tableName="bs_system" ></table> 
+	    <table tableName="tj_actiontime" ></table> 
+	    <table tableName="bs_address" ></table>  -->
+<!-- 	    <table tableName="bs_article" ></table> -->
+<!-- 	    <table tableName="t_download" ></table> -->
+	    <!-- <table tableName="t_college" ></table>
+	    <table tableName="t_subject" ></table>
+	    <table tableName="t_dictionary" ></table>
+	    <table tableName="t_teacher" ></table>
+	    <table tableName="t_student" ></table> -->
+	    <table tableName="t_research" ></table>
+	</abatorContext>
+</abatorConfiguration>

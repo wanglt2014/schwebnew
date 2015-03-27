@@ -1,0 +1,85 @@
+@CHARSET "UTF-8";
+.title_detail{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 15px;
+	float:center;
+	width: 100%;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.content_detail{
+	margin-top: 25px;
+	font-size:15px;
+	min-width: 925px;
+	
+}
+
+.content_detail2{height:58px;background:gray; repeat-x; width:80%; 
+margin:0px auto; min-width:1000px; float:none; 
+*width:expression((this.offsetWidth < 1000) ? (this.width = 1000 +'px') : true); }
+
+.title_detail_nolist{
+	margin-left: 0px;
+	margin-right: 20px;
+	margin-top: 15px;
+	float:center;
+	width: 100%;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+.point{
+	color: #5c307d;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: left;
+	
+}
+
+#trainingPlanfm {
+	margin: 0;
+	padding: 10px 30px;
+}
+
+.ftitle {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.fitem {
+	margin-bottom: 5px;
+}
+
+.fitem label {
+	display: inline-block;
+	width: 80px;
+}
+.line_teacher{
+	color:#bbbbbb; width:80%;
+}
+.title_teacher{
+	text-align: left;
+	margin-left: 10%;
+}
+
+.title_plan{
+	margin-top: 20px;
+}
+	
+.plan_content_detail{
+	margin-top: 25px;
+	font-size:15px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.img_photo{ WIDTH:300px; HEIGHT:300px; BORDER:0; }
+.img_thunmb{ WIDTH:150px; HEIGHT:150px; BORDER:0; }

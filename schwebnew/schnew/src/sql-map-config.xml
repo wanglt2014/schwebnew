@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig
+  PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+  "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	
+  <settings
+    cacheModelsEnabled="true"
+    enhancementEnabled="true"
+    lazyLoadingEnabled="true"
+    maxRequests="32"
+    maxSessions="10"
+    maxTransactions="5"
+    useStatementNamespaces="true"
+  />
+  
+  <sqlMap resource="com/et59/cus/domain/maps/bs_order_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_product_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_productcategory_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_supplier_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_user_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_userservice_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_email_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_article_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_menu_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_marking_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_resource_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_role_resource_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_role_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_user_role_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/open_api_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/open_app_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/open_log_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/open_oauth_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_pagestatic_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_leavemessage_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_system_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/tj_actiontime_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/bs_address_SqlMap.xml" />
+  
+  <!-- NEW -->
+  <sqlMap resource="com/et59/cus/domain/maps/t_download_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_college_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_dictionary_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_student_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_teacher_SqlMap.xml" />
+  
+  <sqlMap resource="com/et59/cus/domain/maps/t_paper_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_prize_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_research_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_role_menu_SqlMap.xml" />
+  
+  <sqlMap resource="com/et59/cus/domain/maps/t_subject_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_teacher_paper_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_teacher_prize_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_teacher_research_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_teacher_subject_SqlMap.xml" />
+  
+  <sqlMap resource="com/et59/cus/domain/maps/t_department_SqlMap.xml" />
+  <sqlMap resource="com/et59/cus/domain/maps/t_trainingplan_SqlMap.xml" />
+</sqlMapConfig>

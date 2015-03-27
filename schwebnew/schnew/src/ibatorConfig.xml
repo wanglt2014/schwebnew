@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+ <properties url="file:///E:/workspace_school/schnew/resources/abatorConfig.properties" />
+  <classPathEntry location="${jdbc.jarlocation}" />
+  <ibatorContext id="context1" >
+    <jdbcConnection driverClass="${jdbc.driverClassName}" connectionURL="${jdbc.url}" 
+    userId="${jdbc.username}" password="${jdbc.password}" />
+    <javaModelGenerator targetPackage="${javaModel.targetPackage}" targetProject="${workspace.domain.projectname}" />
+    <sqlMapGenerator targetPackage="${sqlMap.targetPackage}" targetProject="${workspace.domain.projectname}" />
+    <daoGenerator targetPackage="${dao.targetPackage}" targetProject="${workspace.domain.projectname}" type="SPRING" />
+<!--     <table schema="schoolweb" tableName="t_student" ></table>-->
+<!--     <table schema="schoolweb" tableName="t_role_menu" ></table>  -->
+<!--     <table schema="schoolweb" tableName="t_teacher" ></table> -->
+<!--     <table schema="schoolweb" tableName="bs_article" ></table> -->
+<!-- 	<table schema="schoolweb" tableName="t_download" ></table> -->
+<!-- 	<table schema="schoolweb" tableName="t_paper" ></table> -->
+<!-- 	<table schema="schoolweb" tableName="t_prize" ></table> -->
+<!-- 	<table schema="schoolweb" tableName="t_research" ></table> -->
+<!-- 	<table schema="schoolweb" tableName="t_teacher" ></table> -->
+<!-- <table schema="schoolweb" tableName="t_dictionary" ></table> -->
+<!-- <table schema="schoolweb" tableName="t_teacher_paper" ></table> -->
+<!-- <table schema="schoolweb" tableName="t_teacher_prize" ></table> -->
+<!-- <table schema="schoolweb" tableName="t_teacher_research" ></table> -->
+<!-- <table schema="schoolweb" tableName="t_teacher_subject" ></table> -->
+<!-- <table schema="schoolweb" tableName="t_subject" ></table> -->
+<table schema="schoolweb" tableName="t_trainingPlan" ></table>
+<!-- <table schema="schoolweb" tableName="t_department" ></table> -->
+  </ibatorContext>
+</ibatorConfiguration>

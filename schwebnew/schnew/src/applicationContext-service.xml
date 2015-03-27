@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-2.5.xsd
+						http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd">
+
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>WEB-INF/config/59et.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- ######################################################### -->
+	<!-- #################### action ##################### -->
+	<!-- ######################################################### -->
+
+	<!-- 新闻中心 -->
+	<bean name="NewsAction" class="com.et59.cus.action.NewsAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<bean name="AddressAction" class="com.et59.cus.action.AddressAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<bean name="PayAction" class="com.et59.cus.action.PayAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<!-- 产品管理 -->
+	<bean name="ProductAction" class="com.et59.cus.action.ProductAction"
+		scope="prototype" autowire="byName" />
+	<!-- 市场合作 -->
+	<bean name="MarkingAction" class="com.et59.cus.action.MarkingAction"
+		scope="prototype" autowire="byName" />
+	<!--商务合作 -->
+	<bean name="BussinessAction" class="com.et59.cus.action.BussinessAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<bean name="MobileAction" class="com.et59.cus.action.MobileAction"
+		scope="prototype" autowire="byName" />
+	<bean name="OpenApiAction" class="com.et59.cus.action.OpenApiAction"
+		scope="prototype" autowire="byName" />
+	<bean name="OpenAppAction" class="com.et59.cus.action.OpenAppAction"
+		scope="prototype" autowire="byName" />
+	<bean name="OpenLogAction" class="com.et59.cus.action.OpenLogAction"
+		scope="prototype" autowire="byName" />
+	<bean name="OpenOauthAction" class="com.et59.cus.action.OpenOauthAction"
+		scope="prototype" autowire="byName" />
+	<bean name="LeaveMessageAction" class="com.et59.cus.action.LeaveMessageAction"
+		scope="prototype" autowire="byName" />
+	<!-- 登录 -->
+	<bean name="LoginAction" class="com.et59.cus.action.LoginAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<bean name="CacheAction" class="com.et59.cus.action.CacheAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<bean name="ShopCartAction" class="com.et59.cus.action.ShopCartAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<!-- 后台admin -->
+	<bean name="AdminAction" class="com.et59.cus.action.AdminAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 资源 -->
+	<bean name="ResourceAction" class="com.et59.cus.action.ResourceAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 角色 -->
+	<bean name="RoleAction" class="com.et59.cus.action.RoleAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 订单管理 -->
+	<bean name="OrderAction" class="com.et59.cus.action.OrderAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 用户服务 -->
+	<bean name="UserServiceAction" class="com.et59.cus.action.UserServiceAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 供应商管理 -->
+	<bean name="SupplierAction" class="com.et59.cus.action.SupplierAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 菜单管理 -->
+	<bean name="MenuAction" class="com.et59.cus.action.MenuAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 邮件查询 -->
+	<bean name="EmailAction" class="com.et59.cus.action.EmailAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 用户管理 -->
+	<bean name="UserAction" class="com.et59.cus.action.UserAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 上传文件 -->
+	<bean name="UploaderAction" class="com.et59.cus.action.UploaderAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 订购产品 -->
+	<bean name="OrderingAction" class="com.et59.cus.action.OrderingAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<!-- 产品续订 -->
+	<bean name="RepeatOrderAction" class="com.et59.cus.action.RepeatOrderAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 产品分类 -->
+	<bean name="ProductcategoryAction" class="com.et59.cus.action.ProductcategoryAction"
+		scope="prototype" autowire="byName"></bean>
+	<!-- 用户中心 -->
+	<bean name="UserCenterAction" class="com.et59.cus.action.UserCenterAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<!-- 交易查询 -->
+	<bean name="TradeAction" class="com.et59.cus.action.TradeAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	<bean name="ExcuteTimeAction" class="com.et59.cus.action.ExcuteTimeAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	<!-- NEW  -->
+	<!-- 资料下载 -->
+	<bean name="DownLoadInfoAction" class="com.et59.cus.action.DownLoadInfoAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	<!-- 学院简介、院系介绍 -->
+	<bean name="CollegeAction" class="com.et59.cus.action.CollegeAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	<!-- 文章（通知，咨询，教学动态，学生风采） -->
+	<bean name="ArticleAction" class="com.et59.cus.action.ArticleAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	<!-- 课程列表 -->
+	<bean name="SubjectAction" class="com.et59.cus.action.SubjectAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	<!-- 数据字典 -->
+	<bean name="DictionaryAction" class="com.et59.cus.action.DictionaryAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	<!-- 师资队伍 -->
+	<bean name="TeacherAction" class="com.et59.cus.action.TeacherAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	<!-- 文件下载 -->
+	<bean name="FileAction" class="com.et59.cus.tools.FileAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	<!-- 人才培养方案 -->
+	<bean name="TrainingPlanAction" class="com.et59.cus.action.TrainingPlanAction"
+		scope="prototype" autowire="byName">
+	</bean>
+	
+	
+	<!-- 本地数据Service服务 -->
+	<bean id="localService" class="com.et59.cus.service.LocalServiceImpl"
+		autowire="byName" scope="prototype">
+	</bean>
+
+	<!-- 本地数据Service服务代理 -->
+	<bean id="localServiceProxy" parent="baseTxService">
+		<property name="target" ref="localService"></property>
+	</bean>
+	
+	<!-- 本地数据ServiceEX服务 -->
+	<bean id="localServiceEX" class="com.et59.cus.service.LocalServiceEXImpl"
+		autowire="byName" scope="prototype">
+	</bean>
+
+	<!-- 本地数据ServiceEX服务代理 -->
+	<bean id="localServiceEXProxy" parent="baseTxService">
+		<property name="target" ref="localServiceEX"></property>
+	</bean>
+	<!-- bean自动注入，消除get set -->
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+	<!-- DAO服务注入 -->
+	<bean name="orderDAO" class="com.et59.cus.domain.dao.BsOrderDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="productcategoryDAO" class="com.et59.cus.domain.dao.BsProductcategoryDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="commonDAOEx" class="com.et59.cus.domain.dao.ex.CommonDAOImplEx"
+		scope="prototype" autowire="byName" parent="baseDao">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="productDAO" class="com.et59.cus.domain.dao.BsProductDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="supplierDAO" class="com.et59.cus.domain.dao.BsSupplierDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="userDAO" class="com.et59.cus.domain.dao.BsUserDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsMarkingDAO" class="com.et59.cus.domain.dao.BsMarkingDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+
+	<bean name="bsUserserviceDAO" class="com.et59.cus.domain.dao.BsUserserviceDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsEmailDAO" class="com.et59.cus.domain.dao.BsEmailDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<bean name="bsMenuDAO" class="com.et59.cus.domain.dao.BsMenuDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsResourceDAO" class="com.et59.cus.domain.dao.BsResourceDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsRoleDAO" class="com.et59.cus.domain.dao.BsRoleDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsRoleResourceDAO" class="com.et59.cus.domain.dao.BsRoleResourceDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsPagestaticDAO" class="com.et59.cus.domain.dao.BsPagestaticDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsUserRoleDAO" class="com.et59.cus.domain.dao.BsUserRoleDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="tjActiontimeDAO" class="com.et59.cus.domain.dao.TjActiontimeDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="openApiDAO" class="com.et59.cus.domain.dao.OpenApiDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="openAppDAO" class="com.et59.cus.domain.dao.OpenAppDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="openLogDAO" class="com.et59.cus.domain.dao.OpenLogDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="openOauthDAO" class="com.et59.cus.domain.dao.OpenOauthDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsLeavemessageDAO" class="com.et59.cus.domain.dao.BsLeavemessageDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsSystemDAO" class="com.et59.cus.domain.dao.BsSystemDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean name="bsAddressDAO" class="com.et59.cus.domain.dao.BsAddressDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- NEW -->
+	<!-- 资料下载 -->
+	<bean name="tDownloadDAO" class="com.et59.cus.domain.dao.TDownloadDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 学院简介、院系介绍 -->
+	<bean name="tCollegeDAO" class="com.et59.cus.domain.dao.TCollegeDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 文章（通知，咨询，教学动态，学生风采） -->
+	<bean name="bsArticleDAO" class="com.et59.cus.domain.dao.BsArticleDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 角色菜单关联表 -->
+	<bean name="tRoleMenuDAO" class="com.et59.cus.domain.dao.TRoleMenuDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 字典表 -->
+	<bean name="tDictionaryDAO" class="com.et59.cus.domain.dao.TDictionaryDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 教师表 -->
+	<bean name="tTeacherDAO" class="com.et59.cus.domain.dao.TTeacherDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 论文表 -->
+	<bean name="tPaperDAO" class="com.et59.cus.domain.dao.TPaperDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 获奖表 -->
+	<bean name="tPrizeDAO" class="com.et59.cus.domain.dao.TPrizeDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 立项表 -->
+	<bean name="tResearchDAO" class="com.et59.cus.domain.dao.TResearchDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 课程表 -->
+	<bean name="tSubjectDAO" class="com.et59.cus.domain.dao.TSubjectDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 教师论文表 -->
+	<bean name="tTeacherPaperDAO" class="com.et59.cus.domain.dao.TTeacherPaperDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 教师获奖表 -->
+	<bean name="tTeacherPrizeDAO" class="com.et59.cus.domain.dao.TTeacherPrizeDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 教师立项表 -->
+	<bean name="tTeacherResearchDAO" class="com.et59.cus.domain.dao.TTeacherResearchDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 教师课程表 -->
+	<bean name="tTeacherSubjectDAO" class="com.et59.cus.domain.dao.TTeacherSubjectDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 专业表（人才培养方案） -->
+	<bean name="tDepartmentDAO" class="com.et59.cus.domain.dao.TDepartmentDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 培养方案表（人才培养方案） -->
+	<bean name="tTrainingplanDAO" class="com.et59.cus.domain.dao.TTrainingplanDAOImpl"
+		scope="prototype" autowire="byName">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	
+	
+	
+	<!-- 动态多数据源支持 -->
+	<jee:jndi-lookup id="ds0" jndi-name="jdbc/ds0" />
+	<jee:jndi-lookup id="ds1" jndi-name="jdbc/ds1" />
+	<jee:jndi-lookup id="ds2" jndi-name="jdbc/ds2" />
+	<bean id="dynamicDataSource" class="com.et59.cus.tools.DynamicDataSource">
+		<property name="targetDataSources">
+			<map key-type="java.lang.String">
+				<entry key="0" value-ref="ds0" />
+				<entry key="1" value-ref="ds1" />
+				<entry key="2" value-ref="ds2" />
+			</map>
+		</property>
+		<property name="defaultTargetDataSource" ref="1" />
+	</bean>
+
+	<!-- 配置事务管理数据源 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource_mysql" />
+	</bean>
+	<!-- mysql数据源 -->
+	<bean id="dataSource_mysql" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="initialSize" value="${jdbc.initialSize}" />
+		<property name="maxActive" value="${jdbc.maxActive}" />
+	</bean>
+	<!-- 连接池配置 -->
+	<bean id="dataSource_druid" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<!-- 基本属性 url、user、password -->
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+
+		<!-- 配置初始化大小、最小、最大 -->
+		<property name="initialSize" value="1" />
+		<property name="minIdle" value="1" />
+		<property name="maxActive" value="20" />
+
+		<!-- 配置获取连接等待超时的时间 -->
+		<property name="maxWait" value="60000" />
+
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+
+		<property name="validationQuery" value="SELECT 'x'" />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize"
+			value="20" />
+
+		<!-- 配置监控统计拦截的filters -->
+		<property name="filters" value="stat" />
+	</bean>
+	<!-- oracle数据源 -->
+	<bean id="dataSource_oracle" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+		<property name="url"
+			value="jdbc:oracle:thin:@192.168.100.235:1521:mpptest" />
+		<property name="username" value="gmcc" />
+		<property name="password" value="skywin" />
+		<property name="initialSize" value="1" />
+		<property name="maxActive" value="4" />
+	</bean>
+	<!-- 配置sqlmapclient -->
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation" value="classpath:sql-map-config.xml" />
+		<!-- <property name="dataSource" ref="dataSource_mysql" /> -->
+		<property name="dataSource" ref="dataSource_druid" />
+	</bean>
+	<!-- 配置事务 -->
+	<bean id="baseTxService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		abstract="true">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="proxyTargetClass" value="true" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="query*">readOnly</prop>
+				<prop key="get*">readOnly</prop>
+				<prop key="del*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- mysql方式重写ibtais默认 sqlExecutor -->
+	<bean id="sqlExecutor" class="com.et59.cus.domain.dao.ex.LimitSqlExecutor">
+		<property name="dialect">
+			<bean class="com.et59.cus.domain.dao.ex.MySQLDialect" />
+		</property>
+	</bean>
+	<!-- 利用Spring进行截断，使之用自己的sqlExecutor -->
+	<bean id="baseDao" abstract="true"
+		class="com.et59.cus.domain.dao.ex.BaseDaoiBatis" init-method="initialize">
+		<property name="sqlExecutor" ref="sqlExecutor" />
+	</bean>
+</beans>
